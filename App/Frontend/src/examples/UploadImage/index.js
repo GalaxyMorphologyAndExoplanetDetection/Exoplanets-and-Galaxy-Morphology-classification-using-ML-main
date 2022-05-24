@@ -12,7 +12,6 @@ function UploadImage() {
 
     // Add code here to upload file to server
     // ...
-    console.log(event.target.files);
   }
 
   return (
