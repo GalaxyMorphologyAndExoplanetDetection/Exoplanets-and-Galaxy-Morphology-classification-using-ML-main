@@ -6,7 +6,7 @@ function Form() {
   const [dispositionScore, setDispositionScore] = useState("");
   const [ntlpfp, setNtlpfp] = useState("");
   const [cofpf, setCofpf] = useState("");
-  const [tcepn, setTcepn] = useState("");
+  const [ecpn, setEcpn] = useState("");
   const [pru, setPru] = useState("");
   const [insflux, setInsflux] = useState("");
   const [trdepth, settrdepth] = useState("");
@@ -36,6 +36,14 @@ function Form() {
           required
         />
         <input
+          value={sefpf}
+          onChange={(e) => setSefpf(e.target.value)}
+          placeholder="Stellar Eclipse FPF"
+          type="text"
+          name="sefpf"
+          required
+        />
+        <input
           value={cofpf}
           onChange={(e) => setCofpf(e.target.value)}
           placeholder="Centroid Offset FPF"
@@ -44,43 +52,35 @@ function Form() {
           required
         />
         <input
-          value={tcepn}
-          onChange={(e) => setTcepn(e.target.value)}
-          placeholder="TCE Planet Number"
+          value={ecpn}
+          onChange={(e) => setEcpn(e.target.value)}
+          placeholder="Ephemeris Contamination FPF"
           type="text"
-          name="tcepn"
-          required
-        />
-        <input
-          value={pru}
-          onChange={(e) => setPru(e.target.value)}
-          placeholder="Planetary Radius Upper"
-          type="text"
-          name="pru"
-          required
-        />
-        <input
-          value={insflux}
-          onChange={(e) => setInsflux(e.target.value)}
-          placeholder="Insulation Flux"
-          type="text"
-          name="insflux"
+          name="epcn"
           required
         />
         <input
           value={trdepth}
           onChange={(e) => settrdepth(e.target.value)}
-          placeholder="Transition depth"
+          placeholder="Transition depth Upper"
           type="text"
           name="trdepth"
           required
         />
         <input
-          value={sefpf}
-          onChange={(e) => setSefpf(e.target.value)}
-          placeholder="Stellar Eclipse FPF"
+          value={insflux}
+          onChange={(e) => setInsflux(e.target.value)}
+          placeholder="Insulation Flux Lower"
           type="text"
-          name="sefpf"
+          name="insflux"
+          required
+        />
+        <input
+          value={pru}
+          onChange={(e) => setPru(e.target.value)}
+          placeholder="Stellar Radius Upper"
+          type="text"
+          name="pru"
           required
         />
         <button type="submit"> Predict </button>

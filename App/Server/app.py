@@ -10,6 +10,7 @@ import sys
 import cv2
 import os
 import shutil
+import pickle
 import flask
 from flask import Flask, render_template
 from tensorflow import keras
@@ -56,20 +57,26 @@ def upload_files():
     return render_template('result.html',value=arr) 
 @app.route("/exoplanet", methods=['GET', 'POST'])
 def exoplanet():
-    MODEL_PATH = './MLP.h5'
+    # MODEL_PATH = './MLP.h5'
+    MODEL_PATH = './LR_model.sav'
     data = flask.request.form
     data = data.to_dict(flat=False)
     test = []
     for i in data.items():
-        if i[0]=='dispositionScore':
-            pass
-        else:
-            test.append(float(i[1][0]))
-    model = load_model(MODEL_PATH)
+        test.append(float(i[1][0]))
+    print(test)
+    
+    
+    model = pickle.load(open(MODEL_PATH, 'rb'))
+    # model = load_model(MODEL_PATH)
+    print(model.predict([test]))
     y_pred1 = float(model.predict([test]))
     arr=[]
-    arr.append(y_pred1)
-    return render_template('exoresult.html', value=arr)
-
+    if y_pred1==0.0:
+        arr.append("is not a habitable exoplanet")
+        return render_template('exoresult.html', value=arr)
+    else:
+        arr.append("is a habitable exoplanet")
+        return render_template('exoresult.html', value=arr)
 if __name__ == '__main__':
     app.run(host='127.0.0.1',port=5000)
