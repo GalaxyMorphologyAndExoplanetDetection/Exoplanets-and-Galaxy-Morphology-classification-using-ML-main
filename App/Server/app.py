@@ -17,7 +17,7 @@ from tensorflow import keras
 from keras.models import load_model
 from keras.preprocessing.image import ImageDataGenerator 
 
-app = Flask(__name__,template_folder=".")
+app = Flask(__name__)
 
 @app.route("/upload")
 def upload_file():
