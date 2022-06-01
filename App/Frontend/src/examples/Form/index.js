@@ -13,11 +13,11 @@ function Form() {
   const [sefpf, setSefpf] = useState("");
   return (
     <form
-        action="http://127.0.0.1:5000/exoplanet"
-        method="post"
-        id="upload-form"
-        encType="multipart/form-data"
-      >
+      action="http://127.0.0.1:5000/exoplanet"
+      method="post"
+      id="upload-form"
+      encType="multipart/form-data"
+    >
       <MKTypography variant="h4" mb={1}>
         <input
           value={dispositionScore}

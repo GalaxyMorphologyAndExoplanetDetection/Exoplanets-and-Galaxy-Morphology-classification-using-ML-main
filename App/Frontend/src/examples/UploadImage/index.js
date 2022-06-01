@@ -1,19 +1,7 @@
 import React from "react";
-import MKTypography from "components/MKTypography";
 import "./styles.css";
 
 function UploadImage() {
-  // State to store uploaded file
-  const [file, setFile] = React.useState("");
-
-  // Handles file upload event and updates state
-  function handleUpload(event) {
-    setFile(event.target.files[0]);
-
-    // Add code here to upload file to server
-    // ...
-  }
-
   return (
     <div id="upload-box">
       {/* <input type="file" onChange={handleUpload} /> */}
@@ -23,9 +11,9 @@ function UploadImage() {
         id="upload-form"
         encType="multipart/form-data"
       >
-        <input type="file" name="imagefile" id="imagefile"/>
-        <input type="submit"/>
-    </form>
+        <input type="file" name="imagefile" id="imagefile" />
+        <input type="submit" />
+      </form>
       {/* <MKTypography variant="body1" color="text">
         <p>Filename: {file.name}</p>
         <p>File type: {file.type}</p>
