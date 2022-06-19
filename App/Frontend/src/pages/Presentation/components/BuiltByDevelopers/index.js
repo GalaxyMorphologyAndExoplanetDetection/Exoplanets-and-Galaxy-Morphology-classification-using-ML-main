@@ -43,7 +43,7 @@ function BuiltByDevelopers() {
           </MKTypography>
           <MKTypography
             component="a"
-            href=""
+            href="https://github.com/GalaxyMorphologyAndExoplanetDetection/MajorProjectReport"
             target="_blank"
             rel="noreferrer"
             variant="body2"

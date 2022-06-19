@@ -68,7 +68,7 @@ export default {
       All rights reserved. Copyright &copy; {date}{" "}
       <MKTypography
         component="a"
-        href="https://www.creative-tim.com"
+        href="https://github.com/GalaxyMorphologyAndExoplanetDetection?view_as=public"
         target="_blank"
         rel="noreferrer"
         variant="button"
