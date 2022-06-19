@@ -43,23 +43,23 @@ export default {
       items: [
         {
           name: <GitHubIcon />,
-          href: "https://www.creative-tim.com/presentation",
+          href: "https://github.com/San411",
         },
-        { name: <LinkedIcon />, href: "https://www.creative-tim.com/templates/free" },
+        { name: <LinkedIcon />, href: "https://www.linkedin.com/in/sandesh-bhat-0243241aa/" },
       ],
     },
     {
       name: "Rahul Noronha",
       items: [
-        { name: <GitHubIcon />, href: "https://iradesign.io/" },
-        { name: <LinkedIcon />, href: "https://www.creative-tim.com/bits" },
+        { name: <GitHubIcon />, href: "https://github.com/rahulnoronha" },
+        { name: <LinkedIcon />, href: "https://www.linkedin.com/in/rahul-noronha-77a020189/" },
       ],
     },
     {
       name: "Sahana M",
       items: [
-        { name: <GitHubIcon />, href: "https://www.creative-tim.com/contact-us" },
-        { name: <LinkedIcon />, href: "https://www.creative-tim.com/knowledge-center" },
+        { name: <GitHubIcon />, href: "https://www.linkedin.com/in/sahanamohan7/" },
+        { name: <LinkedIcon />, href: "https://www.linkedin.com/in/sahanamohan7/" },
       ],
     },
   ],
